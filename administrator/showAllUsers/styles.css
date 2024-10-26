@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.selected {
+    background-color: #555; /* Темный цвет для выделенной строки */
+    color: white; /* Цвет текста для контраста */
+}
+/* Общие стили для кнопок */
+button {
+    background-color: #4CAF50; /* Зеленый фон */
+    border: none; /* Без границы */
+    color: white; /* Белый цвет текста */
+    padding: 10px 20px; /* Отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    text-decoration: none; /* Убираем подчеркивание */
+    display: inline-block; /* Позволяет задавать ширину и высоту */
+    font-size: 16px; /* Размер шрифта */
+    margin: 4px 2px; /* Отступы между кнопками */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    border-radius: 5px; /* Закругление углов */
+    transition: background-color 0.3s, transform 0.2s; /* Плавные переходы */
+}
+
+/* Эффект при наведении на кнопку */
+button:hover {
+    background-color: #45a049; /* Темнее зеленый фон */
+    transform: scale(1.05); /* Увеличение кнопки немного при наведении */
+}
+
+/* Эффект при нажатии на кнопку */
+button:active {
+    background-color: #3e8e41; /* Ещё более темный зеленый фон */
+    transform: scale(0.95); /* Уменьшение кнопки при нажатии */
+}
+
+/* Отключенные кнопки */
+button:disabled {
+    background-color: #ccc; /* Серый фон для отключенной кнопки */
+    color: #666; /* Более светлый текст */
+    cursor: not-allowed; /* Курсор с символом запрещения */
+}
+

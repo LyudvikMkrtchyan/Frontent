@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Зеленый цвет фона */
+    color: white; /* Белый цвет текста */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+button:hover {
+    background-color: #45a049; /* Темно-зеленый при наведении */
+}
+
+input[type="date"],
+input[type="time"] {
+    padding: 10px;
+    margin: 5px 0; /* Отступы */
+    border: 1px solid #ddd; /* Светло-серая рамка */
+    border-radius: 4px; /* Скругленные углы */
+    width: calc(100% - 22px); /* Ширина с учетом отступов */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Отступ справа от чекбокса */
+}

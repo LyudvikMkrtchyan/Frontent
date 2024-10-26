@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Խալու տվյալներ</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Խալու տվյալներ</h1>
+        <form id="deliveryForm">
+            <label for="address">Հասցե:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="entrance">Մուտք:</label>
+            <input type="text" id="entrance" name="entrance" required>
+
+            <label for="floor">Հարկ:</laebel>
+            <input type="number" id="floor" name="floor" required>
+
+            <label for="flat">Բնակարան:</label>
+            <input type="text" id="flat" name="flat" required>
+
+            <label for="phone_number">Հեռախոսահամար:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+
+
+            <label for="code">Կոդ:</label>
+            <input type="text" id="code" name="code" required>
+
+
+
+            <label for="location">Կարգավիճակ:</label>
+            <select id="location" name="location" required>
+                <option value="Abovyan">Աբովյան</option>
+                <option value="Other">Այլ</option>
+            </select>
+
+            <button type="button" id="nextButton">Առաջ</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

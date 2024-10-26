@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Քարտոնների Տվյալներ</title>
+</head>
+<body>
+    <h1>Խալու Տվյալներ</h1>
+    <div class="container">
+        <div class="form-columns">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="phone_number">Հեռախոսահամար</label>
+                    <input type="text" id="phone_number" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Հասցե</label>
+                    <input type="text" id="address" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="entrance">Մուտք</label>
+                    <input type="text" id="entrance" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="floor">Հարկ</label>
+                    <input type="text" id="floor" disabled>
+                </div>
+                
+                <div class="form-group">
+                    <label for="flat">Բնակարան</label>
+                    <input type="text" id="flat" disabled>
+                </div>
+            </div>
+
+            <div class="form-column">
+
+                <div class="form-group">
+                    <label for="pickup_date">Վերցնելու ամսաթիվ</label>
+                    <input type="date" id="pickup_date" disabled>
+                </div>
+            
+
+                <div class="form-group">
+                    <label for="desired_date">Ցանկալի ամսաթիվ</label>
+                    <input type="date" id="desired_date" disabled>
+                </div>
+
+            </div>
+
+            <div class="form-column">
+                    
+                <div class="form-group">
+                    <label for="status">Կարգավիճակ</label>
+                    <input type="text" id="status" disabled>
+                </div>
+                
+                <div class="form-group">
+                    <label for="wash_date">Լվացման ամսաթիվ</label>
+                    <input type="date" id="wash_date" disabled>
+                </div>             
+
+                <div class="form-group">
+                    <label for="price">Գին</label>
+                    <input type="number" step="0.01" id="price" disabled>
+                </div>
+            </div>
+
+            <div class="form-column">
+
+                <div class="form-group">
+                    <label for="code">Կոդ</label>
+                    <input type="text" id="code" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery_date">Առաքման ամսաթիվ</label>
+                    <input type="date" id="delivery_date" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Տեղ</label>
+                    <input type="text" id="location" disabled>
+                </div>
+            </div>
+
+            <div class="form-column">
+
+                <div class="form-group">
+                    <label for="washer">Լվացողի ID</label>
+                    <input type="number" id="washer" disabled>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="id_delivery_to_washing">Առաքողի ID</label>
+                    <input type="number" id="id_delivery_to_washing" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label for="id_delivery_to_home">Հետադարձ առաքողի ID</label>
+                    <input type="number" id="id_delivery_to_home" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок для календаря -->
+    <h2>Օրացույց</h2>
+    <div id="calendar" class="calendar">
+        <!-- Дни недели -->
+        <div class="day">Երկ</div>
+        <div class="day">Երեք</div>
+        <div class="day">Չոր</div>
+        <div class="day">Հինգ</div>
+        <div class="day">Ուրբ</div>
+        <div class="day">Շաբ</div>
+        <div class="day">Կիր</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մուտքի էջ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Մուտքագրեք Տվյալները</h1>
+        <form id="userForm">
+            <label for="login">Մուտքանուն:</label>
+            <input type="text" id="login" name="login" placeholder="Մուտքանուն" required>
+
+            <label for="name">Անուն:</label>
+            <input type="text" id="name" name="name" placeholder="Անուն" required>
+
+            <label for="surname">Ազգանուն:</label>
+            <input type="text" id="surname" name="surname" placeholder="Ազգանուն" required>
+
+            <label for="phone">Հեռախոսահամար:</label>
+            <input type="text" id="phone" name="phone" placeholder="Հեռախոսահամար" required>
+
+            <label for="role">Պաշտոն:</label>
+            <select id="role" name="role" required>
+                <option value="washer">Լվացող</option>
+                <option value="worker">Աշխատակից</option>
+                <option value="administrator">Ադմինիստրատոր</option>
+            </select>
+
+            <label for="salary">Աշխատավարձ:</label>
+            <input type="number" id="salary" name="salary" placeholder="Աշխատավարձ" required>
+
+
+            <div class="buttons">
+                <button type="button" id="saveButton">Պահպանել</button>
+                <button type="button" id="backButton">Հետ</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

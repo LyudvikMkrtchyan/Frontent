@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Առաքման տվյալներ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Առաքման տվյալներ</h1>
+        <form id="deliveryForm">
+            <label for="address">Հասցե:</label>
+            <input type="text" id="address" name="address" placeholder="Հասցե" required>
+
+            <label for="entrance">Մուտք:</label>
+            <input type="text" id="entrance" name="entrance" placeholder="Մուտք" required>
+            
+            <label for="floor">Հարկ:</label>
+            <input type="text" id="floor" name="floor" placeholder="Հարկ" required>
+
+            <label for="flat">Բնակարան:</label>
+            <input type="text" id="flat" name="flat" placeholder="Բնակարան" required>
+
+            <label for="phone">Հեռախոսահամար:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Հեռախոսահամար" required>
+            
+            <label for="dateOfRecipte">Վերցնելու ամսաթիվ:</label>
+            <input type="date" id="dateOfRecipte" name="dateOfRecipte" placeholder="Վերցնելու ամսաթիվ" required>
+
+            <label for="timeOfRecipte">Վերցնելու ժամ:</label>
+            <input type="time" id="timeOfRecipte" name="timeOfRecipte" placeholder="Վերցնելու ժամ" required>
+
+
+            <label for="count">Քանակ:</label>
+            <input type="number" id="count" name="count" min="1" max="10" placeholder="Քանակ" required>
+
+            <label for="code">Կոդ:</label>
+            <input type="text" id="code" name="code" placeholder="Կոդ" required>
+
+            <label for="location">Տեղանքը:</label>
+                <select id="location">
+                    <option value="abovyan">Աբովյան</option>
+                     <option value="other">Այլ</option>
+                 </select>
+            <button type="button" id="nextButton">Առաջ</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

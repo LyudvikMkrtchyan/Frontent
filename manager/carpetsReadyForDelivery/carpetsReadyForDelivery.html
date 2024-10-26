@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpets List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Առաքման պատրաստ խալիների ցանկ</h1>
+
+        <div class="selection">
+            <label for="date">Ընտրեք ամսաթիվ:</label>
+            <input type="date" id="date">
+            <button id="showCarpets"> Ցույց տալ խալիները</button>
+        </div>
+
+        <div class="delivery-selection">
+            <label for="delivery">Ընտրեք առաքող:</label>
+            <select id="delivery" multiple>
+                <!-- Динамически заполняемые значения -->
+            </select>
+        </div>
+
+        <button id="confirmDelivery">Հաստատել</button>
+
+        <table id="carpetsTable">
+            <thead>
+                <tr>
+                    <th>Ընտրել</th>
+                    <th>Լվանալու ամսաթիվ</th>
+                    <th>Սպասվող ամսաթիվ</th>
+                    <th>Հեռախոսահամար</th>
+                    <th>Հասցե</th>
+                    <th>Մակերես</th>
+                    <th>Գին</th>
+                    <th>Կոդ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Данные будут добавлены здесь -->
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

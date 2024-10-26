@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washer Page</title>
+</head>
+<body>
+    <h1>Washer Dashboard</h1>
+    <div id="userIdDisplay"></div>
+    <div id="roleDisplay"></div>
+
+    <script>
+        const userId = localStorage.getItem('userId');
+        const role = localStorage.getItem('role');
+
+        if (!userId || role !== 'washer') {
+            // Если пользователь не авторизован или не мойщик, перенаправьте на страницу входа
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('userIdDisplay').textContent = `User ID: ${userId}`;
+        document.getElementById('roleDisplay').textContent = `Role: ${role}`;
+    </script>
+</body>
+</html>

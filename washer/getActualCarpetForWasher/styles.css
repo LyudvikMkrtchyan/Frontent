@@ -1,0 +1,60 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#carpetInfo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+span {
+    font-size: 18px;
+    margin-bottom: 15px; /* Отступ между строками */
+    padding: 10px;
+    border: 1px solid #ddd; /* Рамка вокруг значений */
+    border-radius: 4px; /* Скругление углов */
+    background-color: #f9f9f9; /* Светлый фон для значений */
+    color: #555; /* Цвет текста */
+}
+
+#washButton {
+    background-color: #4CAF50; /* Зеленый цвет кнопки */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 15px 20px; /* Отступы */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 5px; /* Скругление углов кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+#washButton:hover {
+    background-color: #45a049; /* Цвет кнопки при наведении */
+}
