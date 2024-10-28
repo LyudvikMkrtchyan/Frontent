@@ -4,8 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
     const host = localStorage.getItem('host');
     const port = localStorage.getItem('port');
-    comand = '/getActualCarpetForWasher'
+    const comand = '/getActualCarpetForWasher';
     const url = `http://${host}:${port}${comand}`;
+    
     fetch(url, {
         method: "POST", // Изменяем метод на POST
         headers: {
@@ -38,10 +39,13 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("washButton").addEventListener("click", function() {
         const host = localStorage.getItem('host');
         const port = localStorage.getItem('port');
-        comand = '/theCarpetIsWashed'
+        const comand = '/theCarpetIsWashed';
         const url = `http://${host}:${port}${comand}`;
+        
+        console.log(url);
+
         fetch(url, {
-            method: "POST", // Изменяем метод на POST
+            method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -49,9 +53,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 washerId: parseInt(workerId),
                 code: document.getElementById("carpetCode").textContent,
                 surface: parseFloat(document.getElementById("carpetSurface").textContent)
-
-            }) 
+            })
         })
-        window.location.href = '../washerMain.html'; // 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Ошибка при отправке запроса");
+            }
+            console.log("Запрос успешно отправлен");
+            // Переход на другую страницу после успешного ответа
+            window.location.href = '../washerMain.html';
+        })
+        .catch(error => {
+            console.error("Ошибка:", error);
+        });
     });
-});
+}); // Закрывающая скобка для функции DOMContentLoaded
+
