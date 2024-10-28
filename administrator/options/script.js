@@ -54,3 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error('Элемент с ID "duringTime" не найден.');
     }
 });
+
+document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = '../administratorMain.html'; // Укажите путь к странице для отображения всех пользователей
+});
+

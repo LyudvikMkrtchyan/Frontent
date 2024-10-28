@@ -64,13 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }),
             });
 
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-
-            const data = await response.json();
-            console.log(data); // Проверка полученных данных
-            // Здесь вы можете обработать ответ от сервера
+            window.location.href = '../../managerMain.html'
         } catch (error) {
             console.error('Error fetching data:', error);
         }

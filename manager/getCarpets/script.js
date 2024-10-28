@@ -26,9 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
             row.insertCell(1).textContent = carpet.phoneNumber;
             row.insertCell(2).textContent = carpet.pickupDate; // Վերցնելու ամսաթիվ
             row.insertCell(3).textContent = carpet.desiredDate; // տալու ամսաթիվ
-            row.insertCell(4).textContent = carpet.status; 
+            row.insertCell(4).textContent = changeStatus(carpet.status); 
             row.insertCell(5).textContent = carpet.code; // կարգավիճակ
-            row.insertCell(6).textContent = carpet.id; // Իդ
 
             // Добавляем обработчик двойного нажатия
             row.addEventListener('dblclick', () => {
@@ -41,4 +40,22 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("There was a problem with the fetch operation:", error);
     });
 });
+function changeStatus(status){
+    switch (status) {
+        case 'readyToTake':
+            return 'պատրաստ է վերցնելու'
+        case 'dirty':
+            return 'կեղտոտ'
+        case 'clean':
+            return 'լվացած'
+
+        case 'InDelivery':
+            return 'առաքման մեջ է'
+        case 'delivered':
+            return 'առաքված է';
+        
+
+       
+    }
+}
 

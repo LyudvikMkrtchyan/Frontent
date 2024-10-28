@@ -99,12 +99,11 @@ document.getElementById('editUserButton').addEventListener('click', function () 
 // Обработчик для кнопки "Աշխատակցի ֆինանսական մաս"
 document.getElementById('financialPartButton').addEventListener('click', function () {
     if (selectedUser) {
-        // Здесь можно перенаправить на страницу финансового учета
         window.location.href = `financialPart.html?id=${selectedUser.id}`; // Подставьте свой URL для финансов
     }
 });
 
 // Обработчик для кнопки "Հետ"
 document.getElementById('backButton').addEventListener('click', function () {
-    window.location.href = '../administratorMain.html'; // Назад к главной странице администратора
+    window.location.href = '../workers.html'; // Назад к главной странице администратора
 });

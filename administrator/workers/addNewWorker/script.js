@@ -54,16 +54,8 @@ document.getElementById('resetButton').addEventListener('click', function () {
 });
 
 document.getElementById('backButton').addEventListener('click', function () {
-    window.location.href = '../administratorMain.html';
+    window.location.href = '../workers.html';
 });
 
 
 
-document.getElementById('resetButton').addEventListener('click', function () {
-    document.getElementById('userForm').reset(); // Сбрасываем все поля формы
-});
-
-
-document.getElementById('backButton').addEventListener('click', function () {
-    window.location.href = '../administratorMain.html';
-});
