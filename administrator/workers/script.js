@@ -9,4 +9,9 @@ document.getElementById('backButton').addEventListener('click', function() {
     window.location.href = '../administratorMain.html'; // Укажите путь к странице для отображения всех пользователей
 });
 
+document.getElementById('salarysButton').addEventListener('click', function() {
+    window.location.href = './salarys/salarys.html'; // Укажите путь к странице для отображения всех пользователей
+});
+
+
 

@@ -1,0 +1,121 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Стили для таблицы */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+th {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+td {
+    color: #333;
+    font-size: 14px;
+}
+
+#usersTable th, #usersTable td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Стили для кнопки */
+#checkStatusButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkStatusButton:hover {
+    background-color: #45a049;
+}
+
+#checkStatusButton:active {
+    background-color: #3e8e41;
+}
+
+#checkStatusButton:disabled {
+    background-color: #ddd;
+    color: #666;
+    cursor: not-allowed;
+}
+/* Стили для кнопок */
+button {
+    display: inline-block;
+    margin: 20px 10px; /* Внешние отступы для кнопок */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50; /* Основной зеленый цвет */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049; /* Темнее при наведении */
+}
+
+button:active {
+    background-color: #3e8e41; /* Еще темнее при клике */
+}
+
+button:disabled {
+    background-color: #ddd;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Дополнительные стили для отступов вокруг кнопок */
+#checkStatusButton, #backButton {
+    margin: 10px auto;
+    display: block;
+    width: 150px; /* Размер кнопок */
+    text-align: center;
+}
