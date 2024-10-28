@@ -116,7 +116,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
     const username = document.getElementById('username').value; // Получаем логин
     const password = document.getElementById('password').value; // Получаем пароль
-    localStorage.setItem('host', 'localhost');
+    localStorage.setItem('host', ' 94.176.182.63');
     localStorage.setItem('port', '9091');
   
 
