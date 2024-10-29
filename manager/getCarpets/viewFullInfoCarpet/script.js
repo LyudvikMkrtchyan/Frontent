@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получаем параметры из URL
     renderCalendar()
     const urlParams = new URLSearchParams(window.location.search);
-    const id = parseInt(urlParams.get('id'), 10);
+    const code = parseInt(urlParams.get('code'), 10);
 
     // Проверяем, существует ли id
-    if (!id) {
+    if (!code) {
         console.error("ID не найден в URL");
         return;
     }
@@ -14,13 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const port = localStorage.getItem('port');
     comand = '/getCarpetInfo'
     const url = `http://${host}:${port}${comand}`;
+    console.log(url)
     fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            id: id // Передаем id в тело запроса
+            code: code // Передаем id в тело запроса
         }),
     })
     .then(response => {
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('code').value = data.code;
             document.getElementById('desired_date').value = data.desired_date;
             document.getElementById('location').value = data.location;
+            document.getElementById('surface').value = data.surface;
         }
     })
     .catch(error => {
@@ -97,3 +99,61 @@ function renderCalendar() {
         calendarElement.appendChild(dayElement);
     }
 }
+
+document.getElementById('saveButton').disabled = true; // Отключаем кнопку по умолчанию
+
+document.getElementById('editButton').addEventListener('click', function () {
+    // Активируем поля (добавьте нужные поля)
+    const fields = ['address', 'phone_number', 'entrance','floor', 'flat'];
+    
+    fields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        field.disabled = !field.disabled;
+        if (!field.disabled) {
+            field.focus();
+        }
+    });
+    
+    // Активируем кнопку "Հաստատել փոփոխությունը"
+    document.getElementById('saveButton').disabled = false;
+});
+
+document.getElementById('saveButton').addEventListener('click', async function () {
+    const address = document.getElementById('address').value;
+    const entrance = document.getElementById('entrance').value;
+    const floor = document.getElementById('floor').value;
+    const flat = document.getElementById('flat').value;
+    const phoneNumber = document.getElementById('phone_number').value;
+    const code = document.getElementById('code').value;
+
+    const host = localStorage.getItem('host');
+    const port = localStorage.getItem('port');
+    const command = '/changeCarpetInfo';
+    const url = `http://${host}:${port}${command}`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                address: address,
+                entrance: entrance,
+                floor: floor,
+                code: code,
+                flat: flat,
+                phoneNumber: phoneNumber,
+            }),
+        });
+
+        if (response.ok) {
+            location.reload()
+        } else {
+            console.error('Ошибка при обновлении данных');
+        }
+    } catch (error) {
+        console.error('Произошла ошибка при отправке запроса:', error);
+    }
+});
+
