@@ -36,7 +36,7 @@ document.getElementById('saveButton').addEventListener('click', function () {
         if (response.ok) {
             return response.json();
         } else {
-            throw new Error('Ошибка при регистрации');
+           window.location.href = "../workers.html"
         }
     })
     .then(data => {
@@ -44,8 +44,9 @@ document.getElementById('saveButton').addEventListener('click', function () {
         alert('Пользователь успешно зарегистрирован!');
     })
     .catch(error => {
+        window.location.href = "../workers.html"
         console.error('Ошибка:', error);
-        alert('Ошибка при регистрации.');
+    
     });
 });
 

@@ -1,0 +1,59 @@
+/* Основные стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info {
+    margin: 15px 0;
+}
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #6a5acd;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Эффект при наведении на строку */
+tr:hover {
+    background-color: #e1e1f1;
+}

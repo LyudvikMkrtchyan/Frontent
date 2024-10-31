@@ -8,22 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Առաքման պատրաստ խալիների ցանկ</h1>
+        <h1>Լվացված Խալիների ցանկ</h1>
 
-        <div class="selection">
-            <label for="date">Ընտրեք ամսաթիվ:</label>
-            <input type="date" id="date">
-            <button id="showCarpets"> Ցույց տալ խալիները</button>
-        </div>
-
-        <div class="delivery-selection">
-            <label for="delivery">Ընտրեք առաքող:</label>
-            <select id="delivery" multiple>
-                <!-- Динамически заполняемые значения -->
-            </select>
-        </div>
-
-        <button id="confirmDelivery">Հաստատել</button>
+        <!-- Выпадающий список для выбора сотрудника -->
+        <label for="workerSelect">Ընտրել աշխատակից</label>
+        <select id="workerSelect">
+            <option value="">Ընտրել</option>
+        </select>
 
         <table id="carpetsTable">
             <thead>
@@ -31,8 +22,8 @@
                     <th>Ընտրել</th>
                     <th>Լվանալու ամսաթիվ</th>
                     <th>Սպասվող ամսաթիվ</th>
-                    <th>Հեռախոսահամար</th>
-                    <th>Հասցե</th>
+                    <th>Սպասվող ժամի սկիզբ</th>
+                    <th>Սպասվող ժամի ավարտ</th>
                     <th>Մակերես</th>
                     <th>Գին</th>
                     <th>Կոդ</th>
@@ -42,6 +33,9 @@
                 <!-- Данные будут добавлены здесь -->
             </tbody>
         </table>
+
+        <!-- Кнопка для подтверждения -->
+        <button id="confirmButton">Հաստատել</button>
     </div>
     <script src="script.js"></script>
 </body>

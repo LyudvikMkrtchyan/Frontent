@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call the Customer for Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Զանգել Հաճախորդին</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Լվանալու ամսաթիվ</th>
+                <th>Սպասվող ամսաթիվ</th>
+                <th>Հեռախոսահամար</th>
+                <th>Հասցե</th>
+                <th>Մակերես</th>
+                <th>Գին</th>
+                <th>Կոդ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="washedDate"></td>
+                <td id="desiredDate"></td>
+                <td id="phoneNumber"></td>
+                <td id="address"></td>
+                <td id="surface"></td>
+                <td id="price"></td>
+                <td id="code"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <label for="startDeliveryTime">Աժաքում ժամի սկիզբ:</label>
+        <select id="startDeliveryTime">
+            <option value="">Ընտրել ժամ</option>
+            <script>
+                for (let hour = 0; hour < 24; hour++) {
+                    const value = hour < 10 ? `0${hour}:00` : `${hour}:00`;
+                    document.write(`<option value="${value}">${value}</option>`);
+                }
+            </script>
+        </select>
+    </div>
+    <div>
+        <label for="endDeliveryTime">Առաքման ժամի ավարտ:</label>
+        <select id="endDeliveryTime">
+            <option value="">Ընտրել ժամ</option>
+            <script>
+                for (let hour = 0; hour < 24; hour++) {
+                    const value = hour < 10 ? `0${hour}:00` : `${hour}:00`;
+                    document.write(`<option value="${value}">${value}</option>`);
+                }
+            </script>
+        </select>
+    </div>
+
+    <div>
+        <label for="newDate">Փոխել սպասվող ամսաթիվ:</label>
+        <input type="date" id="newDate" style="display: none;">
+        <button id="choisDateButton">Ընտրել առաքման օրը</button>
+        <button id="confirmButton">Հաստատել պայմանավերվածությունը</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -32,7 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
             // Добавляем обработчик двойного нажатия
             row.addEventListener('dblclick', () => {
                 // Переходим на новую страницу с id
-                window.location.href = `./viewFullInfoCarpet/viewFullInfoCarpet.html?code=${carpet.code}`;
+                const encodedCode = encodeURIComponent(carpet.code);
+                window.location.href = `./viewFullInfoCarpet/viewFullInfoCarpet.html?code=${encodedCode}`;
+              //  window.location.href = `./viewFullInfoCarpet/viewFullInfoCarpet.html?code=${carpet.code}`;
                 
             });
         });

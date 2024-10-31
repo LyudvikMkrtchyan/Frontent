@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hy">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Washer Page</title>
+    <title>Լվացողի գլխավոր էջ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Washer Dashboard</h1>
-    <div id="userIdDisplay"></div>
-    <div id="roleDisplay"></div>
+    <div class="container">
+        <h1>Հիմնական Էջ</h1>
+        <div class="buttons">
+            <button id="todaysTakesBtn">Այսօրվա Տալու խալիները</button>
+            <button id="todaysTakedBtn">Այսօրվա Տված խալիները</button>
 
-    <script>
-        const userId = localStorage.getItem('userId');
-        const role = localStorage.getItem('role');
+        </div>
+    </div>
 
-        if (!userId || role !== 'washer') {
-            // Если пользователь не авторизован или не мойщик, перенаправьте на страницу входа
-            window.location.href = 'login.html';
-        }
-
-        document.getElementById('userIdDisplay').textContent = `User ID: ${userId}`;
-        document.getElementById('roleDisplay').textContent = `Role: ${role}`;
-    </script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html><!DOCTYPE html>

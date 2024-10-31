@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Խալու Մանրամասներ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Խալու Մանրամասներ</h1>
+        
+        <!-- Поля для отображения информации об адресе и этаже -->
+        <div class="info">
+            <label>Հասցե: <span id="address"></span></label>
+            <label>Հարկ: <span id="entrance"></span></label>
+        </div>
+
+        <!-- Таблица для отображения информации о ковре -->
+        <table id="carpetDetailsTable">
+            <thead>
+                <tr>
+                    <th>Կոդ</th>
+                    <th>Մակերես</th>
+                    <th>Գին</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Данные будут добавлены через JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="total-label">Ընհանուր Գին:</td>
+                    <td id="totalPrice">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -14,8 +14,8 @@ document.getElementById('getCarpetsBtn').addEventListener('click', function() {
     window.location.href = './getCarpets/getCarpets.html'; // 
 });
 
-document.getElementById('getWashedCarpetsBtn').addEventListener('click', function() {
-    window.location.href = './getWashedCarpets/getWashedCarpets.html'; // 
+document.getElementById('WashedCarpetsBtn').addEventListener('click', function() {
+    window.location.href = './WashedCarpets/WashedCarpets.html'; // 
 });
 
 document.getElementById('getReadyCarpetsBtn').addEventListener('click', function() {

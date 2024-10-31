@@ -2,7 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Получаем параметры из URL
     renderCalendar()
     const urlParams = new URLSearchParams(window.location.search);
-    const code = parseInt(urlParams.get('code'), 10);
+
+// Получаем значение параметра 'code' и декодируем его
+    const code = decodeURIComponent(urlParams.get('code'));
+    console.log(code);
+    //const urlParams = new URLSearchParams(window.location.search);
+
+    
+    //const code = urlParams.get('code');
 
     // Проверяем, существует ли id
     if (!code) {
@@ -12,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const host = localStorage.getItem('host');
     const port = localStorage.getItem('port');
+    console.log(host)
+    console.log(port)
     comand = '/getCarpetInfo'
     const url = `http://${host}:${port}${comand}`;
     console.log(url)
