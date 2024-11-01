@@ -1,0 +1,57 @@
+/* Общие стили для контейнера */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовка */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Стили для заголовков таблицы */
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Стили для строк таблицы */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #d9edf7; /* Цвет при наведении */
+}
+
+/* Стили для резюме */
+.summary {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.summary span {
+    font-weight: bold;
+}
+
+
