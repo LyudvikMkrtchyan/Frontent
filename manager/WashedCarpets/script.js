@@ -51,3 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Ошибка при получении данных:", error);
     });
 });
+
+document.getElementById("backButton").addEventListener("click", function() {
+    window.location.href = '../managerMain.html';
+});

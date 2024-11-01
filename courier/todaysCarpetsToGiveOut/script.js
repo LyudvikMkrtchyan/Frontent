@@ -18,11 +18,12 @@ async function fetchCarpetsData() {
         const data = await response.json();
         
         // Обновление меток общей площади и общей суммы
-        document.getElementById('totalSurface').textContent = data.TotalSurface;
-        document.getElementById('totalPrice').textContent = data.totalprice;
+        document.getElementById('totalSurface').textContent = data.totalSurface;
+        document.getElementById('totalPrice').textContent = data.totalPrice;
         
         // Заполнение таблицы полученными данными
-        populateTable(data.InfoFromAddres);
+        populateTable(data.addressCards);
+        console.log(data.addressCards)
     } catch (error) {
         console.error('Ошибка при получении данных:', error);
     }
@@ -37,12 +38,14 @@ function populateTable(carpets) {
         const row = document.createElement('tr');
         
         row.innerHTML = `
+            <td>${carpet.delivery_time_min}</td>
+            <td>${carpet.delivery_time_max}</td>
             <td>${carpet.address}</td>
-            <td>${carpet.building}</td>
             <td>${carpet.entrance}</td>
-            <td>${carpet.apartment}</td>
-            <td>${carpet.phoneNumber}</td>
-            <td>${carpet.quantity}</td>
+            <td>${carpet.floor}</td>
+            <td>${carpet.flat}</td>
+            <td>${carpet.phone_number}</td>
+            <td>${carpet.carpetsCount}</td>
             <td>${carpet.totalPrice}</td>
             <td>${carpet.totalSurface}</td>
         `;
@@ -51,8 +54,10 @@ function populateTable(carpets) {
         row.addEventListener('dblclick', () => {
             const params = new URLSearchParams({
                 address      : carpet.address,
-                entrance    : carpet.entrance,
-                phoneNumber  : carpet.phoneNumber,
+                entrance     : carpet.entrance,
+                floor        : carpet.floor,
+                flat         : carpet.flat,
+                phoneNumber  : carpet.phone_number,
                 totalPrice   : carpet.totalPrice,
                 totalSurface : carpet.totalSurface
             });

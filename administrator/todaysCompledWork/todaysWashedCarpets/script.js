@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         document.getElementById('totalCount').textContent = data.totalCount;
         document.getElementById('totalSurface').textContent = data.totalSurface;
+        document.getElementById('totalPrice').textContent = data.totalPrice;
     })
     .catch(error => {
         console.error("There was a problem with the fetch operation:", error);

@@ -2,8 +2,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 
 const address = urlParams.get('address');
-
 const entrance = urlParams.get('entrance');
+const floor = urlParams.get('floor');
+const flat = urlParams.get('flat');
 const phoneNumber = urlParams.get('phoneNumber');
 const totalPrice = urlParams.get('totalPrice');
 const totalSurface = urlParams.get('totalSurface');
@@ -11,7 +12,10 @@ console.log('ok')
 
 // Отображение информации об адресе и этаже
 document.getElementById('address').textContent = address;
-document.getElementById('entrance').textContent = entrance; // Исправлено: entrance вместо apartment
+document.getElementById('entrance').textContent = entrance;
+document.getElementById('floor').textContent = floor;
+document.getElementById('flat').textContent = flat;
+document.getElementById('phoneNumber').textContent = phoneNumber;
 
 // Обновление значений для общей площади и общей суммы
 document.getElementById('totalPrice').textContent = totalPrice;
@@ -21,7 +25,7 @@ async function fetchCarpetDetails() {
     try {
         const host = localStorage.getItem('host');
         const port = localStorage.getItem('port');
-        comand = '/getCarpetsFullInfoFromAddress'
+        comand = '/getInDeliveredCarpetsFullInfoFromAddress'
         const url = `http://${host}:${port}${comand}`
         console.log(url)
         const response = await fetch(url, {
@@ -30,9 +34,11 @@ async function fetchCarpetDetails() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                address: address,
-                apartment: entrance, // Исправлено: передаем entrance вместо apartment
-                phoneNumber: phoneNumber
+                address     : address,
+                entrance    : entrance,
+                floor       : floor,
+                flat        : flat ,
+                phoneNumber : phoneNumber
             })
         });
         
