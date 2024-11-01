@@ -67,6 +67,35 @@ function populateTable(details) {
         tableBody.appendChild(row);
     });
 }
+document.getElementById("deliverButton").addEventListener("click", async () => {
+    // Собираем значения из столбца 'code' каждой строки таблицы
+    const rows = document.querySelectorAll("#carpetDetailsTable tbody tr");
+    const codes = Array.from(rows).map(row => row.cells[0].innerText);
+    
+    // Отправляем запрос на сервер
+    try {
+        const host = localStorage.getItem('host');
+        const port = localStorage.getItem('port');
+        comand = '/changeCarpetsStatusToDelivered'
+        const url = `http://${host}:${port}${comand}`
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ codes })
+        });
+        
+        if (response.ok) {
+            // Перенаправление после успешного запроса
+            window.location.href = "../todaysCarpetsToGiveOut.html"; // Укажите нужную локацию
+        } else {
+            console.error("Ошибка при отправке данных");
+        }
+    } catch (error) {
+        console.error("Ошибка:", error);
+    }
+});
 
 // Вызов функции для получения данных при загрузке страницы
 document.addEventListener('DOMContentLoaded', fetchCarpetDetails);
