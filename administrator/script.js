@@ -11,3 +11,7 @@ document.getElementById('optionsButton').addEventListener('click', function() {
 document.getElementById('todaysCompletedWorkButton').addEventListener('click', function() {
     window.location.href = './todaysCompledWork/todaysCompletedWork.html'; // Укажите путь к странице для отображения всех пользователей
 });
+
+document.getElementById('completedWorkButton').addEventListener('click', function() {
+    window.location.href = './compledWork/completedWork.html'; // Укажите путь к странице для отображения всех пользователей
+});

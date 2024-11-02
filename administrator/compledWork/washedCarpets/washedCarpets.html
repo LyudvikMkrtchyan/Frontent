@@ -8,26 +8,40 @@
 </head>
 <body>
     <div class="container">
-        <h1>Այսօրվա լվացված խալիներ</h1>
+        <h1>Լվացած խալիներ</h1>
+
+        <!-- Новая форма для выбора даты и кнопки -->
+        <div class="date-selection">
+            <label for="startDate">Սկիզբ:</label>
+            <input type="date" id="startDate" required>
+            
+            <label for="endDate">Ավարտ:</label>
+            <input type="date" id="endDate" required>
+            
+            <button id="showDataButton">Ցույց տալ</button>
+        </div>
+
         <table id="dataTable">
             <thead>
                 <tr>
-                    <th>Կոդ</th>
-                    <th>Գին</th>
+                    <th>Ամսաթիվ</th>
+                    <th>Քանակ</th>
                     <th>Մակերես</th>
-                    <th>Լվացող</th>
+                    <th>Գումար</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Данные будут добавлены сюда -->
             </tbody>
         </table>
+
         <div class="summary">
             <p>Ընդհանուր քանակ: <span id="totalCount"></span></p>
             <p>Ընդհանուր մակերես: <span id="totalSurface"></span></p>
             <p>Ընդհանուր գումար: <span id="totalPrice"></span></p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
